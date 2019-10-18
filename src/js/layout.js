@@ -10,6 +10,8 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { yo_yo } from "./views/yo_yo";
+import HOTSAUCE from "./views/hotsauces";
+
 //create your first component
 export const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -26,6 +28,7 @@ export const Layout = () => {
 						<Route path="/demo" component={Demo} />
 						<Route path="/yo_yo" component={yo_yo} />
 						<Route path="/single/:theid" component={Single} />
+						<Route path="/hotsauce" component={HOTSAUCE} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />
