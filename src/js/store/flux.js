@@ -1,19 +1,43 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
+			panda: [
+				{
+					timeOfDay: "morning",
+					whatToDo: "yo-yo"
+				},
+				{
+					timeOfDay: "afternoon",
+					whatToDo: "turtle"
+				}
+			],
+			demoz: [
 				{
 					title: "FIRST",
-					background: "white",
-					initial: "white"
+					bg: "white",
+					initial: "white",
+					secondary: "black"
 				},
 				{
 					title: "SECOND",
-					background: "white",
-					initial: "white"
+					bg: "white",
+					initial: "white",
+					secondary: "black"
+				},
+				{
+					title: "third",
+					bg: "white",
+					initial: "white",
+					secondary: "black"
+				},
+				{
+					title: "Fourth",
+					bg: "black",
+					initial: "black"
 				}
 			]
 		},
+
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
@@ -30,13 +54,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//we have to loop the entire demo array to look for the respective index
 				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
+				const demo = store.demoz.map((elm, i) => {
+					if (i === index) elm.bg = color;
 					return elm;
 				});
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			changeTimeOfDay: (index, what) => {
+				const store = getStore();
+
+				const newTime = store.panda.map((item, i) => {
+					if (i === index) item.timeOfDay = what;
+					return item;
+				});
+				setStore({ panda: newTime });
 			}
 		}
 	};
