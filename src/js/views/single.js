@@ -10,7 +10,7 @@ export const Single = props => {
 				{({ store }) => {
 					return (
 						<h1 className="display-4">
-							This will show the demo element: {store.demo[props.match.params.theid].title}
+							This will show the demo element: {store.demoz[props.match.params.theid].title}
 						</h1>
 					);
 				}}

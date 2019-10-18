@@ -3,7 +3,7 @@ import { Consumer } from "../store/appContext";
 
 export const yo_yo = () => (
 	<div>
-		<h1> YO YO YOOOO</h1>
+		<h1> Click on when below to see a change</h1>
 		<ul>
 			<Consumer>
 				{({ store, actions }) => {

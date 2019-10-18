@@ -11,6 +11,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { yo_yo } from "./views/yo_yo";
 import HOTSAUCE from "./views/hotsauces";
+import blah from "./views/blah";
 
 //create your first component
 export const Layout = () => {
@@ -29,6 +30,7 @@ export const Layout = () => {
 						<Route path="/yo_yo" component={yo_yo} />
 						<Route path="/single/:theid" component={Single} />
 						<Route path="/hotsauce" component={HOTSAUCE} />
+						<Route path="/blah/:theid" component={blah} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />

@@ -1,5 +1,7 @@
 import React from "react";
 import { Consumer } from "../store/appContext";
+import { Link } from "react-router-dom";
+
 function HOTSAUCE() {
 	return (
 		<div className="card-deck">
@@ -17,6 +19,9 @@ function HOTSAUCE() {
 								burn:
 								<br />
 								{item.scoville}
+								<Link to={"/blah/" + index}>
+									<button className="btn btn-danger">Click to see more</button>
+								</Link>
 							</div>
 						);
 					});
